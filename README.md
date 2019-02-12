@@ -1,7 +1,7 @@
 # Oauthclient
 Oauth Client with webview popup
 
-#To get a Git project into your build:
+# Dependencies 
 <pre>
 	allprojects {
 		repositories {
