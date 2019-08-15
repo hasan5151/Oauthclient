@@ -3,7 +3,7 @@ Oauth Client with webview popup
 
 For Kotlin:
 
-    val oauthSmart= OauthSmart
+    OauthSmart
             .newBuilder(this).baseUrl(Defs.Facebook)
             .clientId("clientId")
             .redirectUri("https://yourRedirectUri")
@@ -11,7 +11,7 @@ For Kotlin:
             // It is possible to add here scope method also
             .build { s-> System.out.println(s) }
         
-        val oauth = Oauth.Builder(this)
+    Oauth.Builder(this)
             .baseUrl(Defs.Facebook)
             .clientId("clientId")
             .redirectUri("https://yourRedirectUri")
