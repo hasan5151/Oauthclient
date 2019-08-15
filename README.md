@@ -3,21 +3,18 @@ Oauth Client with webview popup
 
 For Kotlin:
 
-    OauthSmart
-            .newBuilder(this).baseUrl(Defs.Facebook)
-            .clientId("clientId")
-            .redirectUri("https://yourRedirectUri")
-            .responseType(Defs.code) //Defs.code or Defs.token 
-            // It is possible to add here scope method also
-            .build { s-> System.out.println(s) }
-        
-    Oauth.Builder(this)
-            .baseUrl(Defs.Facebook)
-            .clientId("clientId")
-            .redirectUri("https://yourRedirectUri")
-            .responseType(Defs.code) //Defs.code or Defs.token
-            .scope(FacebookScope.user_photos)
-            .build { s->System.out.println(s)}
+         new Oauth.Builder(this)
+                .baseUrl(Defs.Facebook)
+                .clientId("clientId")
+                .redirectUri("https://uri")
+                .responseType(Defs.code) //Defs.code or Defs.token
+                //   .scope(FacebookScope.user_photos)
+                .build(authCode ->{
+                    Toast.makeText(this,authCode,Toast.LENGTH_LONG).show();
+                })
+        OauthSmart.newBuilder(this).baseUrl(Defs.Facebook).clientId("clientId").redirectUri("https://uri").responseType(Defs.code).build(authCode->{
+            Toast.makeText(this,authCode,Toast.LENGTH_LONG).show();
+        });
         
 
 # Dependencies 
