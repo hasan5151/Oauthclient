@@ -12,6 +12,9 @@ For Kotlin:
                 .build(authCode ->{
                     Toast.makeText(this,authCode,Toast.LENGTH_LONG).show();
                 })
+		
+		
+		
         OauthSmart.newBuilder(this).baseUrl(Defs.Facebook).clientId("clientId").redirectUri("https://uri").responseType(Defs.code).build(authCode->{
             Toast.makeText(this,authCode,Toast.LENGTH_LONG).show();
         });
