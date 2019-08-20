@@ -1,8 +1,7 @@
 # Oauthclient
 Oauth Client with webview popup
 
-For Kotlin:
-
+ 
          new Oauth.Builder(this)
                 .baseUrl(Defs.Facebook)
                 .clientId("clientId")
