@@ -62,7 +62,7 @@ public class Authorization {
                                         String description, String failingUrl) {
                 authCode.code("");
                 authpopup.dismiss();
-                Toast.makeText(context,context.getString(R.string.webviewerror, errorCode),Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Oauth Error:" errorCode+,Toast.LENGTH_LONG).show();
                 /*try{
                     throw new OauthException();
                 }catch (OauthException e) {
